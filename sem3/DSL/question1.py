@@ -6,29 +6,39 @@
 #d) To display index of first appearance of the substring
 #e) To count the occurrences of each word in a given string
 
-str = " 12345  123456 67 vhk"
+str = "hii my name is himanshu k mendhe and i am struwafdq????!@!@"
 
 def longestWord () :
     wordLength = 0
     longestWordLength = 0
-    indexOfLongestWord= []
+    lastIndexOfLongestWord= [0]
+
     for i in range (0,len(str),1) :
         if (str[i] != ' ') :
             wordLength += 1
-        
-        if (wordLength >= longestWordLength):
-            indexOfLongestWord.append(i)
-            a = i
-            longestWordLength = wordLength
-  
-            
-        if (str[i] == " ") :
+
+            if (wordLength >= longestWordLength):
+                lastIndexOfLongestWord.pop(0)
+                lastIndexOfLongestWord.append(i)
+                longestWordLength = wordLength
+
+        else :
             wordLength = 0
 
+    indexOfLongestWord = lastIndexOfLongestWord[0] - longestWordLength
 
-    print(longestWordLength) 
-    print(indexOfLongestWord)
-    print(a)
+    print(longestWordLength)
+    print(str[indexOfLongestWord:lastIndexOfLongestWord[0]+1])
             
+#longestWord()
 
-longestWord()
+
+def charRepetition (someChar) :
+    repCount = 0
+    for i in range (0,len(str),1) :
+        if (str[i] == someChar) :
+            repCount += 1
+
+    print(repCount)
+
+#charRepetition("@")
