@@ -27,7 +27,7 @@ def longestWord (myStr) :
     indexOfLongestWord = lastIndexOfLongestWord[0] - longestWordLength
 
     print("longest word is",myStr[indexOfLongestWord:lastIndexOfLongestWord[0]+1],"and its length is",longestWordLength)     
-           
+
 #longestWord()
 
 
@@ -37,7 +37,7 @@ def charRepetition (myStr, someChar) :
         if (myStr[i] == someChar) :
             repCount += 1
 
-    print("Repetition count of charachte",someChar,"is",repCount)
+    print("Repetition count of character",someChar,"is",repCount)
 
 #charRepetition("@")
 
@@ -55,7 +55,7 @@ def checkPalindrome (testCase) :
     else :
         print (testCase,"is not a palindrome")    
 
-#checkPalindrome("muafaum") 
+#checkPalindrome("madam") 
 
 def firstAppIndex (myStr,testCase) :
     for i in range (0,len(myStr),1) :
@@ -67,7 +67,7 @@ def firstAppIndex (myStr,testCase) :
                 break
 
         if (count == len(testCase)):
-            print("the index of first occurance of ",testCase,"is",i)
+            print("the index of first occurrence of ",testCase,"is",i)
             break    
 
 #firstAppIndex("him")
