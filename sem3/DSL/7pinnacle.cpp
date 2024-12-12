@@ -47,6 +47,7 @@ class sll{
         node* newNode = new node (prn, name);
         if (head == NULL){
             head = tail = newNode;
+            head->next = NULL;
         }
         else {
             tail -> next = newNode;

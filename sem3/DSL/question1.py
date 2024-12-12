@@ -31,6 +31,7 @@ def longestWord (myStr) :
 #longestWord()
 
 
+
 def charRepetition (myStr, someChar) :
     repCount = 0
     for i in range (0,len(myStr),1) :
